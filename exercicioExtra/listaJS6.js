@@ -3,9 +3,10 @@ nome de uma propriedade contida nesse objeto. Em seguida, retorne uma cópia des
 propriedade especificada no segundo parâmetro. */
 
 function removerPropriedade(objeto, propriedade){
-    const novoObjeto = Object.assign(objeto), prop = propriedade;
-    delete novoObjeto[prop];
+    const novoObjeto = Object.assign({}, objeto); //1o parametro: destino, 2o parametro: origem. Nesse caso, o destino foi um objeto em branco, que foi guardado em "novoObjeto".
+    delete novoObjeto[propriedade];
     console.log(novoObjeto);
+    console.log(objeto);
 
 }
 
